@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/convert/:number/:language', async (req, res) => {
 
     const { number, language } = req.params;
+    if(!number || !language) {
+        return res.status(400).json({ error: 'Number and language are required.' });
+    }
     try {
         const result = await NumTOWord(number, language);
         res.json({ result });
