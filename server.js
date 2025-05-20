@@ -4,8 +4,6 @@ const { NumTOWord } = require('./index.js');
 const app = express();
 const port = 3000;
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/convert/:number/:language', async (req, res) => {
 
     const { number, language } = req.params;
