@@ -1,0 +1,21 @@
+{
+  "name": "no_to_word",
+  "version": "1.0.8",
+  "description": "This package take number and language as input and return its pronounciation in language which entered in input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "number",
+    "to",
+    "word",
+    "translation"
+  ],
+  "author": "Bhavya Godhaniya",
+  "license": "ISC",
+  "dependencies": {
+    "microsoft-translate-api": "^1.1.0"
+  }
+}
