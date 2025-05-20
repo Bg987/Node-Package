@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [
     "number",
@@ -16,6 +16,8 @@
   "author": "Bhavya Godhaniya",
   "license": "ISC",
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "express": "^5.1.0",
     "microsoft-translate-api": "^1.1.0"
   }
 }
