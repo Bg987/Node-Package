@@ -6,7 +6,7 @@ const port = 3000;
 app.use(cors());
 const supportedCodes = [
     "en", "gu", "as", "bn", "bho", "doi", "hi", "kn", "gom", "mai",
-    "ml", "mr", "mni-mtei", "lus", "or", "pa", "sa", "sd", "ta", "te"
+    "ml", "mr", "mni-mtei", "lus", "or", "pa", "sd", "ta", "te"
 ];
 
 app.get('/convert/:number/:language', async (req, res) => {
