@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Number to Word Converter
 
 A JavaScript package to convert numbers to words in various languages.
@@ -81,3 +82,6 @@ Version
 
 
 
+=======
+# Node-Package
+>>>>>>> 38ea0162a570cf25b3c3bcab3e1812a05199c577
