@@ -9,6 +9,7 @@ module.exports.NumTOWord = async function (number, language) {
             str += ' ';
         }
     }
+    
     let translation = await translate(str, 'en', language);
     return translation;
 }
