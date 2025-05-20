@@ -1,13 +1,9 @@
-# 📦 Number to Word Converter
 
-A lightweight JavaScript package to convert numbers into words in various Indian languages using Microsoft Translate API.
+# Number to Word Converter
 
-[![npm version](https://img.shields.io/npm/v/no_to_word)](https://www.npmjs.com/package/no_to_word)
-[![license](https://img.shields.io/npm/l/no_to_word)](./LICENSE)
+A JavaScript package to convert numbers to words in various Indian languages.
 
----
-
-## 🚀 Installation
+## Installation
 
 Install the package using npm:
 
@@ -15,42 +11,35 @@ Install the package using npm:
 npm install no_to_word
 ```
 
----
+## Usage
 
-## 📖 Usage
-
-Require the package and use the `NumTOWord` function:
+Use it in your JavaScript file like this:
 
 ```javascript
 const m = require("no_to_word");
 
-async function converter(n, a) {
-  const result = await m.NumTOWord(n, a);
+async function x(n, a) {
+  let result = await m.NumTOWord(n, a);
   console.log("ans = " + JSON.stringify(result));
 }
 ```
 
-### 🔍 Example
+### Example
 
-Convert the number `34` to words in **Gujarati**:
+Convert the number 34 to Gujarati:
 
 ```javascript
 let n = 34;
 let a = "gu";
-converter(n, a);
+x(n, a);
 ```
 
-**Output:**
-
+Output:
 ```
 ans = "ચોત્રીસ"
 ```
 
----
-
-## 🌐 Supported Languages
-
-The following languages are currently supported:
+## Supported Languages
 
 | Language      | Code       |
 |---------------|------------|
@@ -70,32 +59,60 @@ The following languages are currently supported:
 | Mizo          | `lus`      |
 | Odia          | `or`       |
 | Punjabi       | `pa`       |
-| Sanskrit      | `sa`       |
 | Sindhi        | `sd`       |
 | Tamil         | `ta`       |
 | Telugu        | `te`       |
 
----
-
-## ⚠️ Limitations
-
-- The maximum number that can be converted is: **999,999,999**
-- Requires an active internet connection (uses Microsoft Translate API)
+> ✅ The maximum number that can be converted is **999999999**.
 
 ---
 
-## 📄 License
+## API Usage (Test Online)
+
+You can also test the package via a hosted API using the following format:
+
+```
+GET https://node-package.onrender.com/convert/:number/:language
+```
+
+### Example:
+
+```
+GET https://node-package.onrender.com/convert/23/gu
+```
+
+**Response:**
+```json
+[
+  {
+    "translations": [
+      {
+        "text": "    ત્રેવીસ ",
+        "to": "gu"
+      }
+    ]
+  }
+]
+```
+
+### Error Example:
+If you provide an unsupported language:
+```json
+{
+  "error": "Unsupported language code"
+}
+```
+
+---
+
+## License
 
 This package is licensed under the **ISC License**.
 
----
-
-## 👨‍💻 Author
+## Author
 
 **Bhavya Godhaniya**
 
----
-
-## 📦 Version
+## Version
 
 **1.0.8**
