@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const { NumTOWord } = require('./index.js');
 const app = express();
@@ -8,7 +7,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/convert/:number/:language', async (req, res) => {
-    
+
     const { number, language } = req.params;
     try {
         const result = await NumTOWord(number, language);
