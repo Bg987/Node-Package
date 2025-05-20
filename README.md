@@ -1,87 +1,101 @@
-<<<<<<< HEAD
-Number to Word Converter
+# 📦 Number to Word Converter
 
-A JavaScript package to convert numbers to words in various languages.
+A lightweight JavaScript package to convert numbers into words in various Indian languages using Microsoft Translate API.
 
-Installation
+[![npm version](https://img.shields.io/npm/v/no_to_word)](https://www.npmjs.com/package/no_to_word)
+[![license](https://img.shields.io/npm/l/no_to_word)](./LICENSE)
 
-To install this package, run the following command:
+---
 
-bash
+## 🚀 Installation
 
+Install the package using npm:
+
+```bash
 npm install no_to_word
-Usage
+```
 
-To use this package, require it in your JavaScript file:
+---
 
-javascript
+## 📖 Usage
 
+Require the package and use the `NumTOWord` function:
 
+```javascript
 const m = require("no_to_word");
-Then, call the NumTOWord function with the number and language as arguments:
-
 
 async function x(n, a) {
-  let result = await m.NumTOWord(n, a);
+  const result = await m.NumTOWord(n, a);
   console.log("ans = " + JSON.stringify(result));
 }
-Example
+```
 
-Convert the number 34 to words in Gujarati:
+### 🔍 Example
 
-javascript
+Convert the number `34` to words in **Gujarati**:
 
-Verify
-
+```javascript
 let n = 34;
 let a = "gu";
 x(n, a);
-This will output:
+```
 
+**Output:**
+
+```
 ans = "ચોત્રીસ"
-Language Support
+```
 
-This package uses the Microsoft Translate API to translate the words to the desired language. Currently, it supports translations to the following languages:
+---
 
-English (en)
-Gujarati (gu)
-Assamese (as)
-Bengali (bn)
-Bhojpuri (bho)
-Dogri (doi)
-Hindi (hi)
-Kannada (kn)
-Konkani (gom)
-Maithili (mai)
-Malyalam (ml)
-Marathi (mr)
-Manipuri (mni-mtei)
-Mizo (lus)
-Odia (or)
-Punjabi (pa)
-Sanskrit (sa)
-Sindhi (sd)
-Tamil (ta)
-Telugu (te)
-Limitation
+## 🌐 Supported Languages
 
-The maximum number that can be translated is 999999999.
+The following languages are currently supported:
 
-License
+| Language      | Code       |
+|---------------|------------|
+| English       | `en`       |
+| Gujarati      | `gu`       |
+| Assamese      | `as`       |
+| Bengali       | `bn`       |
+| Bhojpuri      | `bho`      |
+| Dogri         | `doi`      |
+| Hindi         | `hi`       |
+| Kannada       | `kn`       |
+| Konkani       | `gom`      |
+| Maithili      | `mai`      |
+| Malayalam     | `ml`       |
+| Marathi       | `mr`       |
+| Manipuri      | `mni-mtei` |
+| Mizo          | `lus`      |
+| Odia          | `or`       |
+| Punjabi       | `pa`       |
+| Sanskrit      | `sa`       |
+| Sindhi        | `sd`       |
+| Tamil         | `ta`       |
+| Telugu        | `te`       |
 
-This package is licensed under the ISC License.
+---
 
-Author
+## ⚠️ Limitations
 
-Bhavya Godhaniya
+- The maximum number that can be converted is: **999,999,999**
+- Requires an active internet connection (uses Microsoft Translate API)
 
-Version
+---
 
-1.0.8
+## 📄 License
 
+This package is licensed under the **ISC License**.
 
+---
 
+## 👨‍💻 Author
 
-=======
-# Node-Package
->>>>>>> 38ea0162a570cf25b3c3bcab3e1812a05199c577
+**Bhavya Godhaniya**
+
+---
+
+## 📦 Version
+
+**1.0.8**
