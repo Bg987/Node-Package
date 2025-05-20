@@ -24,7 +24,7 @@ Require the package and use the `NumTOWord` function:
 ```javascript
 const m = require("no_to_word");
 
-async function x(n, a) {
+async function converter(n, a) {
   const result = await m.NumTOWord(n, a);
   console.log("ans = " + JSON.stringify(result));
 }
@@ -37,7 +37,7 @@ Convert the number `34` to words in **Gujarati**:
 ```javascript
 let n = 34;
 let a = "gu";
-x(n, a);
+converter(n, a);
 ```
 
 **Output:**
