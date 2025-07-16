@@ -72,6 +72,12 @@ app.get('/', (req, res) => {
         ]
     });
 })
+app.use((req, res, next) => {
+  res.status(404).json({
+    success: false,
+    message: 'Not found'
+  });
+});
 app.listen(port, () => {
     ping();
     console.log(`Server is running`);

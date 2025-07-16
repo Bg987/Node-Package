@@ -103,8 +103,6 @@ If you provide an unsupported language:
 }
 ```
 
----mod
-
 ## License
 
 This package is licensed under the **ISC License**.
