@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const { NumTOWord } = require('./index.js');
+const { NumTOWord } = require('no_to_word');
+//const http = require("http");
+const https = require("https");
+
 const app = express();
 const port = 3000;
 app.use(cors());
@@ -8,6 +11,17 @@ const supportedCodes = [
     "en", "gu", "as", "bn", "bho", "doi", "hi", "kn", "gom", "mai",
     "ml", "mr", "mni-mtei", "lus", "or", "pa", "sd", "ta", "te"
 ];
+
+async function ping() {
+    setInterval(() => {
+        https.get("https://node-package.onrender.com/test", (res) => {
+            console.log(`Pinged. Status code: ${res.statusCode}`);
+        }).on("error", (e) => {
+            console.error(`Ping failed: ${e.message}`);
+        });
+    }, 1000); // every 11 minutes
+
+}
 
 app.get('/convert/:number/:language', async (req, res) => {
 
@@ -26,6 +40,11 @@ app.get('/convert/:number/:language', async (req, res) => {
         res.status(500).json({ error: 'An error occurred while processing your request.' });
     }
 });
+
+app.get('/test', async (req, res) => {
+    res.status(200).json("ok");
+});
+
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome to the Number to Word API! Use /convert/:number/:language to convert numbers.', accepted: [
@@ -54,5 +73,6 @@ app.get('/', (req, res) => {
     });
 })
 app.listen(port, () => {
+    ping();
     console.log(`Server is running`);
 });
