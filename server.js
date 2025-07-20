@@ -34,6 +34,7 @@ app.get('/convert/:number/:language', async (req, res) => {
     }
     try {
         const result = await NumTOWord(number, language);
+        result.input = number;
         res.json(result);
     } catch (error) {
         console.error('Error:', error);
