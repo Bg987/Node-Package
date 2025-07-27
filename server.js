@@ -14,7 +14,7 @@ const supportedCodes = [
 
 async function ping() {
     setInterval(() => {
-        https.get("https://node-package.onrender.com/test", (res) => {
+        https.get("https://node-package-tni8.onrender.com/test", (res) => {
             console.log(`Pinged. Status code: ${res.statusCode}`);
         }).on("error", (e) => {
             console.error(`Ping failed: ${e.message}`);
