@@ -79,6 +79,6 @@ app.use((req, res, next) => {
   });
 });
 app.listen(port, () => {
-    ping();
+   // ping();
     console.log(`Server is running`);
 });
